@@ -1,16 +1,21 @@
+import { PlanbyComponentNG } from './planby/PlanbyComponentNG';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { CustomReactComponentWrapperComponent } from './CustomReactComponentWrapper';
+import { ReactSelectComponent } from './react-select/react-select.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent, HeaderComponent],
   imports: [
-    BrowserModule
+    BrowserModule,
+    PlanbyComponentNG,
+    CustomReactComponentWrapperComponent,
+    ReactSelectComponent,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
